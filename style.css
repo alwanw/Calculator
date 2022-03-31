@@ -1,0 +1,79 @@
+/*body {
+  background-color: #000000;
+}
+
+button {
+  border : 2px solid #aaaaaa;
+  background-color: #BB86FC;
+  font-weight: bold;
+}
+
+.results {
+  border : 2px solid #aaaaaa;
+}
+
+button:active {
+  background-color: #FFFFFF;
+}*/
+
+body {
+  --accent-color: #b00020;
+  --background-color: rgb(220,220,220);
+  --text-color: white;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark{
+  --accent-color: #cf6679;
+  --background-color: rgb(44,44,44);
+  --text-color: black;
+}
+
+.container {
+  margin: 50px auto;
+  padding: 10px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(80px, auto) repeat(5, 50px);
+}
+
+.double {
+  grid-column: span 2;
+}
+
+button {
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.results {
+  grid-column: 1 / -1;
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
